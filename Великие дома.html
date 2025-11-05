@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(173, 182, 177); ">
+    <head>
+        <meta charset="utf-8">
+        <title>Игра престолов | персонажи</title>
+        <style>
+            @font-face {
+            font-family: 'GameOfThrones';
+            src: url('GameOfThrones.ttf') format('truetype');
+        }
+            @font-face {
+            font-family: 'Calibri';
+            src: url('calibri.ttf') format('truetype');
+        }
+        * {
+                font-family: 'Calibri';
+            }
+        .menu-container {
+                width: 330px;
+                height: 50px;
+                background-color: rgb(100, 49, 28);
+                transition: height 1s ease;
+                overflow: hidden;
+                color: white;
+                font-family: 'GameOfThrones';
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                border-radius: 20px;
+                z-index: 1000;
+            }
+        .menu-header {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 20px;
+                color: rgb(179, 179, 179);
+                font-family: 'GameOfThrones';
+            }
+        .menu-item {
+                padding: 8px 15px;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                font-family: 'GameOfThrones';
+            }
+        .menu-container:hover{
+                height: 160px;
+            }
+        body{
+                background-image: url('Foto/фон.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0px;
+                position: relative;
+                background-attachment: fixed;
+                padding-top: 20px;
+            }
+        p{
+            line-height: 150%;
+        }
+        a{
+            color: rgb(196, 87, 43);
+            transition-property: color;
+            transition-duration: 0.5s;
+        }
+        a.menu{
+            color: rgb(179, 179, 179);
+            transition-property: color;
+            transition-duration: 0.5s;
+            font-family: 'GameOfThrones';
+        }
+        a:hover{
+            color: rgb(236, 90, 27);
+        }
+        a.menu:hover{
+            color: rgb(243, 243, 243);
+        }
+        button{
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: rgb(175, 175, 175);
+            background-color: rgb(175, 175, 175);
+            font-size: 20px;
+            transition-property: background-color, border-color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+        }
+        button:hover{
+            background-color: rgb(228, 228, 228);
+            border-color: rgb(228, 228, 228);
+        }
+        div.registration{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        div.centered-full-heigth{
+            max-width: 1200px;
+            width: 100%;
+            min-height: calc(100vh - 100px);
+            background-color: rgb(39, 39, 39);
+            position: relative;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        button.regButton{
+            width: 150px;
+            height: 30px;
+            background-color: rgb(100, 49, 28);
+            color: rgb(179, 179, 179);
+            border-width: 0px;
+            transition-property: background-color;
+            transition-duration: 0.5s;
+        }
+        button.regButton:hover{
+            background-color: rgb(196, 84, 36);
+        }
+        div.basic{
+            display: flex;
+            gap: 20px;
+            width: 490px;
+            height: 260px;
+            background-color: antiquewhite;
+            border-radius: 15px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 10px;
+            border-color: rgb(151, 66, 32);
+            border-style: solid;
+            border-width: 2px;
+            background-color: rgb(61, 61, 61);
+            transition-property: background-color;
+            transition-duration: 0.5s;
+        }
+        div.TwoBasic{
+            display: flex;
+            gap: 20px;
+            width: 1000px;
+            height: 260px;
+            margin: 10px auto 0 auto;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        div.basic:hover{
+            background-color: rgb(87, 87, 87);
+        }
+        
+        div.alldescr{
+            width: 230px;
+            height: 250px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        div.image{
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            
+        }
+        div.TitleOfImage{
+            font-family: 'GameOfThrones';
+            font-size: 25px;
+            color: rgb(199, 199, 199);
+        }
+        div.description{
+            font-size: 20px;
+            color: rgb(199, 199, 199);
+        }
+        div.button{
+            margin-top: auto;
+        }
+        div.AllTitle{
+            width: 800px;
+            height: 155px;
+            border-radius: 50px;
+            font-family: 'GameOfThrones';
+            text-align: center;
+            padding-top: 12px;
+            margin-left: auto;
+            margin-bottom: 50px;
+            margin-right: auto;
+            margin-top: 20px;
+            font-size: 60px;
+            color: rgb(175, 175, 175);
+            background-color: rgb(114, 52, 28);
+            box-shadow: 10px 10px 15px 7px rgb(0, 0, 0);
+            text-shadow: 3px 7px 2px rgb(0, 0, 0);
+        }
+        div.titledescription{
+            width: 900px;
+            height: auto;
+            text-align: center;
+            margin-top: 70px;
+            margin-left: auto;
+            margin-bottom: 50px;
+            margin-right: auto;
+            background-color: rgb(56, 56, 56);
+            padding: 10px 10px 10px 10px;
+            font-size: 30px;
+            color: rgb(175, 175, 175);
+            border-color: rgb(151, 66, 32);
+            border-style: solid;
+            border-width: 2px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="menu-container">
+            <div class="menu-header">Меню</div>
+            <div class="menu-item"><a href="index.html" class="menu">Главная</a></div>
+            <div class="menu-item"><a href="GameOFThronesPersonas.html" class="menu">Персонажи</a></div>
+            <div class="menu-item"><a href="#" class="menu">Контакты</a></div>
+        </div>
+        <div class="AllTitle">Великие дома "Игры престолов"</div>
+        <div class="registration"><button class="regButton" onclick="window.location.href='Регистрация.html'">регистрация</button></div>
+        <div class="centered-full-heigth">
+        <div class="titledescription">Добро пожаловать на страничку, посвященную описанию великих домов из <a href="https://www.kinopoisk.ru/series/464963/">игры престолов</a></div>
+        <div class="TwoBasic">
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Старки.jpg'); background-size: cover; background-position: -11px;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Старки</div>
+                <div class="description"><p>Девиз Старков - "Зима близко" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Ланнистеры.webp'); background-size: cover;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Ланнистеры</div>
+                <div class="description"><p>Девиз Ланнистеров - "Услышь мой рев" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        </div>
+        <div class="TwoBasic">
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Таргариены.jpg'); background-size: cover;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Таргариены</div>
+                <div class="description"><p>Девиз Таргариенов - "Пламя и кровь" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Талли.jpg'); background-size: cover;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Талли</div>
+                <div class="description"><p>Девиз Талли - "Семья, долг, честь" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        </div>
+        <div class="TwoBasic">
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Аррены.jpg'); background-size: cover; background-position: -65px;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Аррены</div>
+                <div class="description"><p>Девиз Арренов - "Высокий как честь" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Грейджои.jpg'); background-size: cover;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Грейджои</div>
+                <div class="description"><p>Девиз Грейджоев - "Мы не сеем" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        </div>
+        <div class="TwoBasic">
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Баратеоны.jpg'); background-size: cover; background-position: -90px; background-position: 0px; background-position: center 10%;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Баратеоны</div>
+                <div class="description"><p>Девиз Баратеонов - "Нам ярость"  </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        <div class="basic">
+            <div class="image" style="background-image: url('Великие_дома/Тиррелы.jpg'); background-size: cover; background-position: -40px;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Тиррелы</div>
+                <div class="description"><p>Девиз Тиррелов - "Вырастая - крепнем" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+        </div>
+        <div class="TwoBasic">
+        <div class="basic" >
+            <div class="image" style="background-image: url('Великие_дома/Мартеллы.jpg'); background-size: cover;"></div>
+            <div class="alldescr">
+                <div class="TitleOfImage">Мартеллы</div>
+                <div class="description"><p>Девиз Мартеллов - "Непреклонные, несгибаемые, несдающиеся" </p></div>
+                <div class="button"><button class="descr">читать больше...</button></div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

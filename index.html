@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+            font-family: 'GameOfThrones';
+            src: url('GameOfThrones.ttf') format('truetype');
+            }
+            @font-face {
+            font-family: 'Calibri';
+            src: url('calibri.ttf') format('truetype');
+            }
+            * {
+                font-family: 'Calibri';
+            }
+            body{
+                background-image: url('Foto/фон2.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0px;
+                position: relative;
+                background-attachment: fixed;
+                padding-top: 20px;
+            }
+            div.MainTitle{
+                margin-left: auto;
+                margin-right: auto;
+                width: 800px;
+                height: 180px;
+                background-size: cover;
+                border-radius: 20px;
+            }
+            div.centered-full-heigth{
+                max-width: 1200px;
+                width: 100%;
+                background-color: rgb(48, 40, 40);
+                position: relative;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 25px;
+                padding-bottom: 20px;
+            }
+            .menu-container {
+                width: 330px;
+                height: 50px;
+                background-color: rgb(100, 49, 28);
+                transition: height 1s ease;
+                overflow: hidden;
+                color: white;
+                font-family: 'GameOfThrones';
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                border-radius: 20px;
+                z-index: 1000;
+            }
+            .menu-header {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 20px;
+                color: rgb(179, 179, 179);
+                font-family: 'GameOfThrones';
+            }
+            .menu-item {
+                padding: 8px 15px;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                font-family: 'GameOfThrones';
+            }
+            .menu-container:hover{
+                height: 160px;
+            }
+            a{
+                color: rgb(196, 87, 43);
+                transition-property: color;
+                transition-duration: 0.5s;
+            }
+            a:hover{
+                color: rgb(236, 90, 27);
+            }
+            a.menu{
+                color: rgb(179, 179, 179);
+                transition-property: color;
+                transition-duration: 0.5s;
+                font-family: 'GameOfThrones';
+            }
+            a:hover{
+                color: rgb(236, 90, 27);
+            }
+            a.menu:hover{
+                color: rgb(243, 243, 243);
+            }
+            div.Zanlavnaya{
+                font-size: 50px;
+                color: rgb(175, 175, 175);
+                margin-left: 50px;
+                margin-top: 5px;
+                text-shadow: 5px 5px 3px black;
+            }
+            div.registration{
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 1000;
+            }
+            button.regButton{
+                width: 150px;
+                height: 30px;
+                background-color: rgb(100, 49, 28);
+                color: rgb(179, 179, 179);
+                border-width: 0px;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+            }
+            button.regButton:hover{
+                background-color: rgb(196, 84, 36);
+            }
+            button{
+                width: 200px;
+                height: 40px;
+                border-radius: 20px;
+                border-style: solid;
+                border-color: rgb(175, 175, 175);
+                background-color: rgb(175, 175, 175);
+                font-size: 20px;
+                transition-property: background-color, border-color;
+                transition-duration: 0.5s;
+                transition-timing-function: ease;
+            }
+            p{
+                line-height: 150%;
+                color: rgb(175, 175, 175);
+                font-size: 30px;
+            }
+            div.ppp{
+                width: 1150px;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+            }
+            ul.Custom-list{
+                color: rgb(175, 175, 175);
+                list-style: none;
+                font-size: 40px;
+            }
+            li.custom-marker, li.custom-marker2{
+                margin-bottom: 20px;
+                display: flex;
+                align-items: flex-start;
+
+            }
+            li.custom-marker::before{
+                content: "";
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-image: url('Foto/МечИконка.png');
+                background-size: cover;
+                margin-right: 20px;
+                display: block;
+                align-items: flex-start;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            li.custom-marker2::before{
+                content: "";
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-image: url('Foto/Знамя.png');
+                background-size: cover;
+                margin-right: 20px;
+                display: block;
+                align-items: flex-start;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            div.titleList{
+                font-size: 40px;
+            }
+            div.ListDescription{
+                font-size: 30px;
+            }
+            div.list-content {
+                display: flex;
+                flex-direction: column;
+            }
+            a.list-link {
+                text-decoration: none;
+                color: rgb(175, 175, 175);
+                transition-property: color;
+                transition-duration: 1s;
+            }
+            a.list-link:hover{
+                color: rgb(236, 90, 27);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="MainTitle"></div>
+        <div class="registration"><button class="regButton" onclick="window.location.href='Регистрация.html'">регистрация</button></div>
+        <div class="menu-container">
+            <div class="menu-header">Меню</div>
+            <div class="menu-item"><a href="GameOFThronesPersonas.html" class="menu">Персонажи</a></div>
+            <div class="menu-item"><a href="Великие дома.html" class="menu">Великие дома</a></div>
+            <div class="menu-item"><a href="#" class="menu">Контакты</a></div>
+        </div>
+        <div class="centered-full-heigth">
+            <div class="Zanlavnaya">Заглавная</div>
+            <div class="ppp"><p><a href="https://www.kinopoisk.ru/series/464963/">«Игра престолов»</a> — эпическая история о борьбе за власть в Семи Королевствах. Разные дома сражаются за Железный Трон, а их судьбы переплетаются в войнах и интригах. На этом сайте вы найдете информацию о:</p></div>
+            <ul class="Custom-list">
+                <li class="custom-marker">
+                    <a href="GameOFThronesPersonas.html" class="list-link">
+                        <div class=" list-content">
+                            <div class="titleList">Персонажах</div>
+                            <div class="ListDescription">Вы узнаете все о главных героях этой вселенной</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="custom-marker2">
+                    <a href="Великие дома.html" class="list-link">
+                        <div class=" list-content">
+                            <div class="titleList">Великих домах Вестероса</div>
+                            <div class="ListDescription">Вы узнаете о великих домах этой вселенной и об их особбенностях</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="ppp"><p>Осторожно, спойлеры! Данный сайт не рекомендуется к просмотру тем, кто не знаком или не до конца знаком с произведением, так как в нем могут содержаться спойлеры</p></div>
+        </div>
+    </body>
+</html>
